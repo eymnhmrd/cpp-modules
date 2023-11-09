@@ -56,13 +56,13 @@ int    PhoneBook::getIndex()
         else 
         {
             std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cin.ignore(1000, '\n');
             std::cout << "Enter a valid number > : ";
         }
         if (std::cin.eof())
         {
             std::cout << "EOF reached" << std::endl;
-            exit(EXIT_FAILURE);
+            std::exit(EXIT_FAILURE);
         }
     }
     return (i);
@@ -72,6 +72,6 @@ void    PhoneBook::search()
 {
     int i = getIndex();
     this->contacts[i].viewEndl();
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');   
+    std::cin.ignore(1000, '\n');   
 }
 

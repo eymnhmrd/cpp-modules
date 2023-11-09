@@ -26,7 +26,7 @@ std::string Contact::getData(std::string str)
         else if (std::cin.eof())
         {
             std::cout << "EOF reached" << std::endl;
-            exit(EXIT_FAILURE);
+            std::exit(EXIT_FAILURE);
         }
         else
         {
@@ -61,7 +61,7 @@ std::string     Contact::getPhoneNumber(std::string str)
         else if (std::cin.eof())
         {
             std::cout << "EOF reached" << std::endl;
-            exit(EXIT_FAILURE); 
+            std::exit(EXIT_FAILURE); 
         }
         else 
         {
