@@ -73,7 +73,7 @@ int main()
     {
         for (int i = 0; i < N; i++)
             z[i].announce();
+        delete[] z;
     }
-    delete[] z;
     return (0);
 }

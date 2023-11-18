@@ -32,8 +32,8 @@ void    Harl::complain(std::string level)
 {
     std::string str[4] = {"debug", "info", "warning", "error"};
     void    (Harl::*p[4])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
-
-    for (int i = 0; i < 4; i++)
+    int i;
+    for (i = 0; i < 4; i++)
     {
         if (str[i] == level)
         {
@@ -41,4 +41,6 @@ void    Harl::complain(std::string level)
             return ;
         }
     }
+    if (i == 4)
+        std::cout << "LEVEL NOT FOUND!" << std::endl;
 }
